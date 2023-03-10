@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body
+        {
+            background-image: linear-gradient(to right, #0c2c5c, #bfc3ca);
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+        }
+        td
+        {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <img src="imgex/logocine.png">
+    <br><br>
+    <center><h1 style="color: #9f7408;">Registro de cliente VIP</h1></center>
+    <p>Gracias por contaratar tu servicio vip, a continuacion te solicitaremos unos datos para darte el mejor servicio posible.</p>
+    <form action="" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Infromacion del Cliente</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="nom">Nombre</label><br>
+                        <input type="tex" placeholder="Nombre" required><br>
+                    </td>
+                    <td>
+                        <label for="ap">Apellido paterno</label><br>
+                        <input type="tex" placeholder="Apellido paterno" required><br>
+                    </td>
+                    <td>
+                        <label for="am">Apellido materno</label><br>
+                        <input type="tex" placeholder="Apellido materno" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="am">Apodo:</label><br>
+                        <input type="tex" placeholder="Apellido materno" required ><br>
+                    </td>
+                    <td>
+                        <label for="fo">Foto de usted:</label>
+                        <input type="file" name="fil" id="fo"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>¿Cual es su genero?</p>
+                        <input type="radio" name="wym" id="wym" value="wym">
+                        <label for="wym">Mujer</label><br>
+                        <input type="radio" name="wym" id="wym" value="wym">
+                        <label for="wym">Hombre</label><br>
+                    </td>
+                    <td>
+                        <label for="ed">¿Cual es tu edad?</label>
+                        <input type="number" name="num" id="ed">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>¿Que dia decias ver tu proxima funcion?</legend>
+            <p>Con esta informacio le ofrecermos las promociones que tenemos que se adapaten a usted.</p>
+            <table>
+                <tr>
+                    <td>
+                        <label for="ca">Dia:</label><br>
+                        <input type="date" ><br>
+                    </td>
+                    <td>
+                        <label for="sem">¿Que semana desea tener 5 voletos gratis?</label><br>
+                        <input type="week" id="sem" ><br>
+                    </td>
+                    <td>
+                        <label for="fv">¿Cual funcion deseas para un voleto VIP?</label><br>
+                        <input type="datetime-local" id="fv"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="com">¿Como deseas tus palomitas especiales?</label><br>
+                        <textarea name="com" id="com"  maxlength="35" cols="55" rows="1"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Perosnalizacion:</legend>
+            <table>
+                <p>¡¡REGALO ESPECIAL!!</p>
+                <tr>
+                    <td>
+                        <label for="op">Perosnaje favorito</label><br>
+                        <select size="5" multiple id="op">
+                            <option>Pinocho</option>
+                            <option>Sherek</option>
+                            <option>Cenicienta</option>
+                            <option>Iron-Man</option>
+                            <option>Mate</option>
+                            <option>Piglet</option>
+                            <option>Otro</option>
+                        </select>   
+                    </td>
+                    <td>
+                        <label for="ta">Bebida favorita:</label><br>                    
+                        <input type="checkbox" name="ta" value="Chico" name="ch">
+                        <label for="ch">Refresco</label><br>          
+                        <input type="checkbox" name="ta" value="Mediano" name="me">
+                        <label for="me">Cafe</label><br>
+                        <input type="checkbox" name="ta" value="Grande" name="ga">
+                        <label for="ga">Agua</label>
+                    </td>
+                    <td>
+                        <label for="col">Color favorito</label><br>
+                        <input type="color"><br>
+                        <input type="submit" value="Enviar datos">
+                        <input type="reset" value="Borrara datos">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+    
+</body>
+</html>
