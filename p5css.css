@@ -1,0 +1,12 @@
+body{
+    background-color:grey;
+}
+legend,h2,h3,label,h5{
+    color: azure;
+}
+h1{
+    color: #a8a7a7;
+}
+td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
