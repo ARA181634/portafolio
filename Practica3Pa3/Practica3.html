@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {
+            'packages':['geochart'],
+            // Note: Because this chart requires geocoding, you'll need mapsApiKey.
+            // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+            'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+          });
+          google.charts.setOnLoadCallback(drawRegionsMap);
+    
+          function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+          ['Country',   'Latitude'],
+          ['Brazil',   85],
+          ['Colombia',   80],
+          ['Venezuela',   40],
+          ['Ecuador',   60],
+          ['Peru',   50],
+          ['Bolivia',   65],
+          ['Paraguay',   55],
+          ['Chile',   95],
+          ['Argentina',   75],
+          ['Uruguay',   100],
+        ]);
+    
+            var options = {
+              region: '005', // America del sur
+              colorAxis: {colors: ['#E63416', '#EDE9BB', '#6AE616']},
+              backgroundColor: '#81d4fa',
+              datalessRegionColor: '#A6A6A6',
+              defaultColor: '#f5f5f5',
+            };
+    
+            var chart = new google.visualization.GeoChart(document.getElementById('geochart-colors'));
+            chart.draw(data, options);
+          };
+        </script>
+      </head>
+      <body>
+        <div id="geochart-colors" style="width: 1050px; height: 650px;"></div>
+      </body>
+</html>
