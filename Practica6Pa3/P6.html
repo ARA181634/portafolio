@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="P6.css">
+    <script src="P6.js"></script>
+</head>
+<body>
+    <section>
+        <p>
+            API (Application Programming Interface):
+            Una API es un conjunto de reglas y protocolos que permiten que diferentes 
+            aplicaciones se comuniquen entre sí. Es una interfaz que define cómo 
+            pueden interactuar los componentes de software. Las API se utilizan para 
+            solicitar y enviar datos entre diferentes sistemas, como aplicaciones web, 
+            servicios en la nube, bases de datos, etc. En este caso, estás utilizando 
+            una API para enviar los datos de un formulario desde tu página web al 
+            servidor.
+        </p>
+    </section>
+    <section>
+        <div id="fondo_formulario">
+            <form id="formulario" method="post" action="">
+                <label for="nom">Nombre</label><br>
+                <input name="nom" type="text"><br>
+                <label for="correo">Correo</label><br>
+                <input name="correo" type="email"><br>
+                <label for="men">Sugerencia</label><br>
+                <textarea name="men"></textarea><br>
+                <button onclick="submitForm(event)">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
