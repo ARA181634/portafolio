@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="A2.css">
+</head>
+<body>
+    <script>
+     let total;
+    function califica()
+    {var total=0;
+    	for (let x=1;x<=4;x++)
+    	{
+        let res=0;
+        let nom="r"+x;
+        let resul=document.getElementsByName(nom);
+        for(let i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="10";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="7.5";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Repobado";
+    }
+   
+    </script>
+    <form>
+        <div>
+            <ul>
+                <li>¿Cuál de las siguientes opciones describe mejor la inteligencia artificial?</li>
+                <input type="radio" name="r1" id="r1" value="0"/>a) Una rama de la informática que estudia cómo hacer que las computadoras piensen como los humanos.<br/>
+		        <input type="radio" name="r1" id="r1" value="0"/>b) Un área de investigación que busca crear robots que sean indistinguibles de los seres humanos.<br/>
+		        <input type="radio" name="r1" id="r1" value="5"/>c) Un conjunto de técnicas y algoritmos que permiten a las máquinas realizar tareas que requieren inteligencia humana.<br/>
+		        <input type="radio" name="r1" id="r1" value="0"/>d) Un campo de estudio que explora cómo mejorar la inteligencia natural a través de implantes cibernéticos.<br/>
+
+                <li>¿Cuál de las siguientes técnicas se utiliza comúnmente en el aprendizaje automático (machine learning)?</li>
+                <input type="radio" name="r2" id="r2" value="5"/>a) Lógica difusa.<br/>
+		        <input type="radio" name="r2" id="r2" value="0"/>b) Programación genética.<br/>
+		        <input type="radio" name="r2" id="r2" value="0"/>c) Algoritmos genéticos<br/>
+		        <input type="radio" name="r2" id="r2" value="0"/>d) Redes neuronales.<br/>
+
+                <li>¿Cuál de los siguientes conceptos está relacionado con el procesamiento del lenguaje natural (NLP)?</li>
+                <input type="radio" name="r3" id="r3" value="0"/>a) Visión por computadora.<br/>
+		        <input type="radio" name="r3" id="r3" value="0"/>b) Aprendizaje por refuerzo.<br/>
+		        <input type="radio" name="r3" id="r3" value="5"/>c) Reconocimiento de voz.<br/>
+		        <input type="radio" name="r3" id="r3" value="0"/>d) Algoritmos de búsqueda.<br/>
+
+                <li>¿Qué es un algoritmo genético?</li>
+                <input type="radio" name="r4" id="r4" value="0"/>a) Un conjunto de instrucciones para realizar una tarea específica en un programa de inteligencia artificial.<br/>
+		        <input type="radio" name="r4" id="r4" value="0"/>b) Una técnica de aprendizaje automático que se basa en la imitación del comportamiento humano.<br/>
+		        <input type="radio" name="r4" id="r4" value="0"/>c) Un enfoque de inteligencia artificial que busca emular el funcionamiento del cerebro humano.<br/>
+		        <input type="radio" name="r4" id="r4" value="5"/>d) Un método de optimización inspirado en la evolución biológica para resolver problemas complejos.<br/>
+
+                <li>¿Cuál de las siguientes técnicas se utiliza comúnmente en el aprendizaje automático (machine learning)?</li>
+                <input type="radio" name="r5" id="r5" value="0"/>a) Lógica difusa.<br/>
+		        <input type="radio" name="r5" id="r5" value="0"/>b) Programación genética.<br/>
+		        <input type="radio" name="r5" id="r5" value="0"/>c) Algoritmos genéticos.<br/>
+		        <input type="radio" name="r5" id="r5" value="5"/>d) Redes neuronales.<br/>
+            </ul>
+        </div>
+        <input type="button" value="Calificar" onclick="califica()" id="boton">
+    </form>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+</body>
+</html>
