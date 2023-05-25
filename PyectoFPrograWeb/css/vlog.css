@@ -1,0 +1,85 @@
+*{
+    padding: none;
+    margin: none;
+}
+body{
+    /*background-image: linear-gradient(to right, #dba93c , #cdcdcd);*/
+    background: linear-gradient(0deg, #f0f0f0, #dba93c); width: 100%; height: 95vh;
+    font-family: 'Prompt', sans-serif;
+  }
+
+#nave0{
+    background-color: #f0f0f0;
+    height: 60px;
+    width: 95%;
+    border-radius: 25px
+}
+#nave{
+    font-size: 25px;
+    padding: 8px;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+}
+.nave2{
+    width: 15%;
+}
+#logo{
+    height: 40px;
+}
+#fondo_vlog_div{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 2px;
+    height: 500px;
+}
+#comentarios{
+    background-color: #969696bb;
+    width: 75%;
+    height: 450px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+    overflow: visible;
+}
+
+#guardar,#eliminar{
+    border: none;
+    background-color: #dba93cc1;
+    border-radius: 8px;
+    font-size: 25px;
+}
+#guardar:hover,#eliminar:hover{
+    border: none;
+    background-color: #8b7a57c1;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 25px;
+}
+#usu,#texto{
+    border: 2px solid black;
+    background-color: #dba93c9a;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    background-color: #969696bb;
+    border-radius: 4px;
+}
+td{
+    vertical-align: middle;
+}
+
+@media(max-width: 800px){
+    #nave{
+        font-size: 25px;
+    }
+}

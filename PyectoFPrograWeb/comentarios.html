@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/comentarios.css">
+</head>
+<body>
+    <section>
+        <nav id="nave0">
+            <section>
+                <table id="nave">
+                    <tr>
+                        <td class="nave2"><a href="index.html"><img id="logo" src="img/logo.png"></a></td>
+                        <td class="nave2"><a href="vlog.html">Vlog</a></td>
+                        <td class="nave2"><a href="ayuda.html">Ayuda</a></td>
+                        <td class="nave2"><a href="comentarios.html">Comentarios</a></td>
+                        <td class="nave2"><a href="cuestionario.html">Cuestionario</a></td>
+                    </tr>
+                </table>
+            </section>
+        </nav>
+    </section>
+    <br><br>
+    <section>
+        <div id="formato_div_titulo">
+            Contacto
+        </div>
+    </section>
+    <section>
+    <div id="formato_div_cuerpo">
+        <form action="php/comentarios.php" method="post">
+            <label for="nombre">Nombre del Usuario</label><br>
+            <input type="text" id="nombre" name="nombre" class="cuerp_formulario" placeholder="Usuario"><br>
+
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email" class="cuerp_formulario" placeholder="Email"><br>
+
+            <label for="mensaje">Comentario</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea><br>
+
+            <input type="submit" id="submit" name="submit" value="Enviar formulario">
+        </form>
+    </div>
+    </section>
+</body>
+</html>

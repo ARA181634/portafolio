@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cuestionario.css">
+    <script type="text/javascript" src="PDF/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="PDF/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="PDF/jspdf.plugin.from_html.js"></script>
+
+
+</head>
+<body>
+    <script>
+     let total;
+    function califica()
+    {var total=0;
+    	for (let x=1;x<=4;x++)
+    	{
+        let res=0;
+        let nom="r"+x;
+        let resul=document.getElementsByName(nom);
+        for(let i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==16)
+        	document.getElementById("comentario").innerHTML="Aprobado.";
+        else
+        	if(total<16&&total>8)
+        	document.getElementById("comentario").innerHTML="Un representante se pondra en contacto con usted.";
+        else
+        	if(total<=8)
+        	document.getElementById("comentario").innerHTML="Pro el momento no es apto.";
+    }
+    function generar(){
+
+        var doc= new jsPDF();
+
+        doc.setTextColor(255,28,28);
+        doc.setFontSize(25);
+        doc.text(10,20, "Evaluación de habilidades y responsabilidad de un vendedor externo para\rpromocionar productos en una página web.")
+
+        doc.setFontSize(15);
+        doc.setTextColor(0,0,0); 
+        doc.text(10,40, "El presente cuestionario tiene como objetivo evaluar las habilidades y la \rresponsabilidad de un vendedor externo en relación con la promoción de\rproductos en una página web, centrándose en su interacción con los\rclientes. Cada pregunta presenta una escala de siempre a nunca, en la\rque los encuestados deben indicar la frecuencia con la que realizan\rciertas acciones clave.");
+        doc.text(10,80, "En el primer caso, si un vendedor externo obtiene una alta calificación en\rtodas o la mayoría de las preguntas, demuestra que posee las habilidades\ry la responsabilidad necesarias para promocionar productos en una\rpágina web. Esto significa que el vendedor responde de manera oportuna\ry completa a las consultas de los clientes, proporciona información\rprecisa sobre los productos, cumple con los plazos de entrega acordados,\rofrece un servicio de atención al cliente eficiente y utiliza los comentarios\rde los clientes para mejorar continuamente.");
+        doc.text(10,130, "En el segundo caso, si un vendedor externo obtiene calificaciones mixtas\ren algunas preguntas del cuestionario, podría indicar que necesita\rasesoramiento adicional o capacitación en ciertas áreas para mejorar sus\rhabilidades en la promoción de productos en línea. Este resultado sugiere\rque existen oportunidades para fortalecer su capacidad de respuesta a\rlas consultas de los clientes, proporcionar información más precisa o\rmejorar la calidad de su servicio de atención al cliente.");
+        doc.text(10,175, "En el tercer caso, el vendedor externo no tiene las habilidades necesarias\rpara promocionar productos en una página web de manera efectiva.\rPresenta deficiencias en la respuesta a consultas de clientes,\rproporcionar información precisa, cumplir con plazos de entrega, brindar\run servicio de atención al cliente adecuado y utilizar la retroalimentación\rpara mejorar. Se sugiere que busque capacitación adicional o considere\rotras opciones para promocionar sus productos en línea.");
+       
+        var string = doc.output('datauristring');
+
+        $('iframe').attr('src',string);
+    }
+   
+    </script>
+    <form>
+        <section>
+            <nav id="nave0">
+                <section>
+                    <table id="nave">
+                        <tr>
+                            <td class="nave2"><a href="index.html"><img id="logo" src="img/logo.png"></a></td>
+                            <td class="nave2"><a href="vlog.html">Vlog</a></td>
+                            <td class="nave2"><a href="ayuda.html">Ayuda</a></td>
+                            <td class="nave2"><a href="comentarios.html">Comentarios</a></td>
+                            <td class="nave2"><a href="cuestionario.html">Cuestionario</a></td>
+                        </tr>
+                    </table>
+                </section>
+            </nav>
+        </section>
+        <section>
+            <div id="formato_div_titulo">
+                Cuestionario de registro 
+            </div>
+            <div id="formato_div_exp">
+                El propósito de este cuestionario es evaluar la responsabilidad y las habilidades necesarias de un vendedor externo para promocionar sus productos en una página web, centrándose en su relación con los clientes.
+            </div>
+        </section>
+        <section>
+        <div id="formato_div_cuerpo">
+            <ul>
+                <li>¿Con qué frecuencia respondes de manera oportuna y completa las consultas de los clientes que recibes a través de la página web?</li>
+                <input type="radio" name="r1" id="r1" value="4"/>a) Siempre<br/>
+		        <input type="radio" name="r1" id="r1" value="3"/>b) Casi siempre<br/>
+		        <input type="radio" name="r1" id="r1" value="2"/>c) A veces<br/>
+		        <input type="radio" name="r1" id="r1" value="1"/>d) Casi Nunca.<br/>
+                <input type="radio" name="r1" id="r1" value="0"/>e) Nunca.<br/>
+                
+
+
+                <li>¿Con qué frecuencia te aseguras de proporcionar información precisa y detallada sobre tus productos en la página web para evitar malentendidos o confusiones entre los clientes?</li>
+                <input type="radio" name="r2" id="r2" value="4"/>a) Siempre<br/>
+		        <input type="radio" name="r2" id="r2" value="3"/>b) Casi siempre<br/>
+		        <input type="radio" name="r2" id="r2" value="2"/>c) A veces<br/>
+		        <input type="radio" name="r2" id="r2" value="1"/>d) Casi Nunca.<br/>
+                <input type="radio" name="r2" id="r2" value="0"/>e) Nunca.<br/>
+
+                <li>¿Con qué frecuencia cumples con los plazos de entrega acordados y te aseguras de que los productos se envíen de manera segura y adecuada?</li>
+                <input type="radio" name="r3" id="r3" value="4"/>a) Siempre<br/>
+		        <input type="radio" name="r3" id="r3" value="3"/>b) Casi siempre<br/>
+		        <input type="radio" name="r3" id="r3" value="2"/>c) A veces<br/>
+		        <input type="radio" name="r3" id="r3" value="1"/>d) Casi Nunca.<br/>
+                <input type="radio" name="r3" id="r3" value="0"/>e) Nunca.<br/>
+
+                <li>¿Con qué frecuencia ofreces un servicio de atención al cliente eficiente y amigable para resolver cualquier problema o inquietud que los clientes puedan tener después de realizar una compra en la página web?</li>
+                <input type="radio" name="r4" id="r4" value="4"/>a) Siempre<br/>
+		        <input type="radio" name="r4" id="r4" value="3"/>b) Casi siempre<br/>
+		        <input type="radio" name="r4" id="r4" value="2"/>c) A veces<br/>
+		        <input type="radio" name="r4" id="r4" value="1"/>d) Casi Nunca.<br/>
+                <input type="radio" name="r4" id="r4" value="0"/>e) Nunca.<br/>
+
+                <li>¿Con qué frecuencia solicitas y utilizas comentarios y opiniones de los clientes para mejorar tus productos y servicios en la página web?</li>
+                <input type="radio" name="r5" id="r5" value="4"/>a) Siempre<br/>
+		        <input type="radio" name="r5" id="r5" value="3"/>b) Casi siempre<br/>
+		        <input type="radio" name="r5" id="r5" value="2"/>c) A veces<br/>
+		        <input type="radio" name="r5" id="r5" value="1"/>d) Casi Nunca.<br/>
+                <input type="radio" name="r5" id="r5" value="0"/>e) Nunca.<br/>
+            </ul>
+        
+        <input type="button" value="Calificar" onclick="califica()" id="boton">
+        <input type="button" value="PDF explicativo" onclick="generar()" id="boton2">
+    </form>
+    <p id="total">   </p>
+    <p id="comentario">   </p>
+    </div>
+    </section>
+    <section>
+        <div id="formato_pdf">
+            <iframe frameborder="0" width="1150" height="500"></iframe>
+        </div>
+    </section>
+
+
+</body>
+</html>
